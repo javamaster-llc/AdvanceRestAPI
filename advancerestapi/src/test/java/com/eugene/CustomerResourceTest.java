@@ -15,7 +15,7 @@ public class CustomerResourceTest {
 
 	Client client = ClientBuilder.newClient();
 
-	WebTarget baseTarget =  client.target("http://localhost:8080/advancerestapi/webapi/");
+	WebTarget baseTarget =  client.target("http://localhost:8280/advancerestapi/");
 	WebTarget customerTarget = baseTarget.path("customers");
 	WebTarget singleCustomerTarget = customerTarget.path("{customerId}");
     // Exercise	get single record	    
@@ -28,6 +28,7 @@ public class CustomerResourceTest {
     	 +" \"city\": \"Boston\","
     	 +" \"country\": \"USA\","
     	 +" \"firstName\": \"Bill\","
+    	 +" \"id\": \"3\","
     	 +" \"lastName\": \"Burke\","
     	 +" \"state\": \"MA\","
     	 +" \"street\": \"256 Clarendon Street\","
